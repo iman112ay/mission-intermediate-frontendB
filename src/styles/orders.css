@@ -1,0 +1,425 @@
+.orders-page {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  align-items: start;
+  gap: 24px;
+  min-height: 65vh;
+  padding-block: 34px;
+}
+
+.orders-sidebar h1 {
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+
+.orders-sidebar > p {
+  margin-bottom: 20px;
+  color: #888;
+  font-size: 12px;
+}
+
+.orders-account-nav {
+  display: grid;
+  gap: 4px;
+  padding: 18px;
+  border: 1px solid #e8e8e8;
+  border-radius: 9px;
+  background: #fff;
+}
+
+.orders-account-nav a {
+  display: flex;
+  min-height: 40px;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 10px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  color: #aaa;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.orders-account-nav a[aria-current="page"] {
+  border-color: #ffbd38;
+  color: #ffad24;
+  background: #fff9e7;
+}
+
+.orders-account-nav a > span {
+  width: 14px;
+  color: currentColor;
+  text-align: center;
+}
+
+.orders-panel {
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.orders-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.orders-tabs {
+  display: flex;
+  min-width: 0;
+  gap: 18px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.orders-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.orders-tabs button {
+  position: relative;
+  flex: 0 0 auto;
+  padding: 8px 0 11px;
+  border: 0;
+  color: #777;
+  background: transparent;
+  font: inherit;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.orders-tabs button.active {
+  color: #f04e35;
+}
+
+.orders-tabs button.active::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: #f04e35;
+  content: "";
+}
+
+.orders-controls {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 8px;
+}
+
+.orders-search,
+.orders-sort {
+  display: flex;
+  height: 34px;
+  align-items: center;
+  border: 1px solid #e8e8e8;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.orders-search {
+  width: 140px;
+  padding-inline: 8px;
+}
+
+.orders-search input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  font-size: 10px;
+}
+
+.orders-search > span:last-child {
+  color: #777;
+  font-size: 17px;
+}
+
+.orders-sort select {
+  max-width: 100px;
+  height: 100%;
+  padding-inline: 8px;
+  border: 0;
+  background: transparent;
+  color: #555;
+  font: inherit;
+  font-size: 10px;
+}
+
+.orders-list {
+  display: grid;
+  gap: 12px;
+}
+
+.order-card {
+  overflow: hidden;
+  border: 1px solid #e6eee6;
+  border-radius: 7px;
+}
+
+.order-card-header {
+  display: flex;
+  min-height: 38px;
+  align-items: center;
+  gap: 14px;
+  padding: 7px 10px;
+  background: #f5fbf4;
+  color: #777;
+  font-size: 10px;
+}
+
+.order-card-header p {
+  white-space: nowrap;
+}
+
+.order-card-header strong {
+  color: #1687e8;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.order-card-header time {
+  flex: 1;
+}
+
+.order-status {
+  padding: 3px 7px;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+
+.status-menunggu {
+  color: #a56a00;
+  background: #fff2cc;
+}
+
+.status-berhasil {
+  color: #1ca74a;
+  background: #dcf8e4;
+}
+
+.status-gagal {
+  color: #d34b32;
+  background: #ffe4dc;
+}
+
+.order-card-course {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr) 120px;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 8px 10px;
+}
+
+.order-card-course > img {
+  width: 34px;
+  height: 30px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.order-card-course h2,
+.order-card-course > p {
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.order-card-price {
+  display: grid;
+  gap: 3px;
+  padding-left: 12px;
+  border-left: 1px solid #eee;
+  font-size: 9px;
+}
+
+.order-card-price span {
+  color: #777;
+}
+
+.order-card-price strong {
+  font-size: 10px;
+}
+
+.order-card-total {
+  display: flex;
+  min-height: 30px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 10px;
+  background: #f5fbf4;
+  color: #777;
+  font-size: 9px;
+}
+
+.order-card-total strong {
+  color: #20bd43;
+  font-size: 10px;
+}
+
+.orders-empty {
+  padding: 40px 16px;
+  color: #777;
+  font-size: 12px;
+  text-align: center;
+}
+
+.orders-empty h2 {
+  margin-bottom: 4px;
+  color: #333;
+  font-size: 15px;
+}
+
+.orders-empty a {
+  display: inline-block;
+  margin-top: 12px;
+  color: #20a942;
+}
+
+.orders-pagination {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+  margin-top: 14px;
+}
+
+.orders-pagination button {
+  min-width: 26px;
+  height: 26px;
+  border: 0;
+  border-radius: 4px;
+  color: #555;
+  background: transparent;
+  font: inherit;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.orders-pagination button:first-child,
+.orders-pagination button:last-child {
+  background: #f4f4f7;
+  font-size: 15px;
+}
+
+.orders-pagination button.active {
+  color: #fff;
+  background: #ffbd38;
+}
+
+.orders-pagination button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.orders-demo-note {
+  margin-top: 12px;
+  color: #999;
+  font-size: 9px;
+  text-align: right;
+}
+
+@media (max-width: 850px) {
+  .orders-page {
+    grid-template-columns: 180px minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .orders-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .orders-controls {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 600px) {
+  .orders-page {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+    padding-block: 20px;
+  }
+
+  .orders-sidebar > p {
+    margin-bottom: 10px;
+  }
+
+  .orders-account-nav {
+    display: grid;
+    gap: 4px;
+    padding: 18px;
+  }
+
+  .orders-account-nav a {
+    min-height: 48px;
+    gap: 14px;
+    padding-inline: 12px;
+    font-size: 15px;
+  }
+
+  .orders-panel {
+    padding: 10px;
+  }
+
+  .orders-toolbar {
+    gap: 8px;
+  }
+
+  .orders-tabs {
+    width: 100%;
+    gap: 16px;
+  }
+
+  .orders-controls {
+    width: 100%;
+    align-self: stretch;
+  }
+
+  .orders-search {
+    flex: 1;
+  }
+
+  .order-card-header {
+    flex-wrap: wrap;
+    gap: 5px 10px;
+  }
+
+  .order-card-header time {
+    order: 3;
+    flex-basis: 100%;
+  }
+
+  .order-status {
+    margin-left: auto;
+  }
+
+  .order-card-course {
+    grid-template-columns: 42px minmax(0, 1fr);
+  }
+
+  .order-card-course > img {
+    width: 42px;
+    height: 38px;
+  }
+
+  .order-card-price {
+    grid-column: 2;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 8px;
+    padding: 0;
+    border: 0;
+  }
+
+  .orders-demo-note {
+    text-align: left;
+  }
+}

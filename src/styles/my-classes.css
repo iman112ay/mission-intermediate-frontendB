@@ -1,0 +1,411 @@
+.my-classes-page {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  align-items: start;
+  gap: 24px;
+  min-height: 65vh;
+  padding-block: 34px;
+}
+
+.my-classes-sidebar h1 {
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+
+.my-classes-sidebar > p {
+  margin-bottom: 20px;
+  color: #888;
+  font-size: 12px;
+}
+
+.my-classes-account-nav {
+  display: grid;
+  gap: 4px;
+  padding: 18px;
+  border: 1px solid #e8e8e8;
+  border-radius: 9px;
+  background: #fff;
+}
+
+.my-classes-account-nav a {
+  display: flex;
+  min-height: 40px;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 10px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  color: #aaa;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.my-classes-account-nav a[aria-current="page"] {
+  border-color: #ffbd38;
+  color: #ffad24;
+  background: #fff9e7;
+}
+
+.my-classes-account-nav a > span {
+  width: 14px;
+  color: currentColor;
+  text-align: center;
+}
+
+.my-classes-panel {
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.my-classes-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.my-classes-tabs {
+  display: flex;
+  min-width: 0;
+  gap: 18px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.my-classes-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.my-classes-tabs button {
+  position: relative;
+  flex: 0 0 auto;
+  padding: 8px 0 11px;
+  border: 0;
+  color: #777;
+  background: transparent;
+  font: inherit;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.my-classes-tabs button.active {
+  color: #f04e35;
+}
+
+.my-classes-tabs button.active::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: #f04e35;
+  content: "";
+}
+
+.my-classes-search {
+  display: flex;
+  width: 140px;
+  height: 34px;
+  flex: 0 0 auto;
+  align-items: center;
+  padding-inline: 8px;
+  border: 1px solid #e8e8e8;
+  border-radius: 6px;
+}
+
+.my-classes-search input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  font-size: 10px;
+}
+
+.my-classes-search > span:last-child {
+  color: #777;
+  font-size: 17px;
+}
+
+.my-classes-list {
+  display: grid;
+  gap: 14px;
+}
+
+.my-class-card {
+  overflow: hidden;
+  border: 1px solid #e6eee6;
+  border-radius: 7px;
+}
+
+.my-class-card-header {
+  display: flex;
+  min-height: 34px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 10px;
+  background: #f5fbf4;
+  font-size: 10px;
+}
+
+.my-class-status {
+  padding: 3px 7px;
+  border-radius: 8px;
+  color: #bc8200;
+  background: #fff3d4;
+}
+
+.my-class-content {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  gap: 14px;
+  padding: 10px;
+}
+
+.my-class-content > img {
+  width: 92px;
+  height: 92px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.my-class-info {
+  min-width: 0;
+}
+
+.my-class-info h2 {
+  margin-bottom: 3px;
+  font-size: 11px;
+}
+
+.my-class-info > p {
+  margin-bottom: 7px;
+  color: #777;
+  font-size: 9px;
+  line-height: 1.4;
+}
+
+.my-class-instructor {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.my-class-instructor img {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.my-class-instructor span,
+.my-class-instructor strong,
+.my-class-instructor small {
+  display: block;
+}
+
+.my-class-instructor strong {
+  font-size: 9px;
+}
+
+.my-class-instructor small {
+  color: #777;
+  font-size: 8px;
+}
+
+.my-class-meta {
+  display: flex;
+  gap: 12px;
+  margin-top: 7px;
+  color: #777;
+  font-size: 9px;
+}
+
+.my-class-progress {
+  display: flex;
+  min-height: 38px;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 10px;
+  border-top: 1px solid #eff2ef;
+  background: #f8fcf7;
+  font-size: 9px;
+}
+
+.my-class-progress > span {
+  flex: 0 0 auto;
+  color: #777;
+}
+
+.my-class-progress > span strong {
+  color: #333;
+}
+
+.my-class-progress-track {
+  height: 2px;
+  flex: 1;
+  overflow: hidden;
+  background: #f8a18e;
+}
+
+.my-class-progress-track span {
+  display: block;
+  height: 100%;
+  background: #f04e35;
+}
+
+.my-class-progress > a {
+  flex: 0 0 auto;
+  padding: 7px 12px;
+  border-radius: 6px;
+  color: #fff;
+  background: #35c957;
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.my-classes-empty {
+  padding: 40px 16px;
+  color: #777;
+  font-size: 12px;
+  text-align: center;
+}
+
+.my-classes-empty h2 {
+  margin-bottom: 4px;
+  color: #333;
+  font-size: 15px;
+}
+
+.my-classes-empty a {
+  display: inline-block;
+  margin-top: 12px;
+  color: #20a942;
+}
+
+.my-classes-pagination {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+  margin-top: 14px;
+}
+
+.my-classes-pagination button {
+  min-width: 26px;
+  height: 26px;
+  border: 0;
+  border-radius: 4px;
+  color: #555;
+  background: transparent;
+  font: inherit;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.my-classes-pagination button:first-child,
+.my-classes-pagination button:last-child {
+  background: #f4f4f7;
+  font-size: 15px;
+}
+
+.my-classes-pagination button.active {
+  color: #fff;
+  background: #ffbd38;
+}
+
+.my-classes-pagination button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.my-classes-demo-note {
+  margin-top: 12px;
+  color: #999;
+  font-size: 9px;
+  text-align: right;
+}
+
+@media (max-width: 850px) {
+  .my-classes-page {
+    grid-template-columns: 180px minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .my-classes-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .my-classes-search {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .my-classes-page {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+    padding-block: 20px;
+  }
+
+  .my-classes-sidebar > p {
+    margin-bottom: 10px;
+  }
+
+  .my-classes-account-nav {
+    display: grid;
+    gap: 4px;
+    padding: 18px;
+  }
+
+  .my-classes-account-nav a {
+    min-height: 48px;
+    gap: 14px;
+    padding-inline: 12px;
+    font-size: 15px;
+  }
+
+  .my-classes-panel {
+    padding: 10px;
+  }
+
+  .my-classes-toolbar {
+    gap: 8px;
+  }
+
+  .my-classes-tabs {
+    width: 100%;
+    gap: 16px;
+  }
+
+  .my-class-content {
+    grid-template-columns: 72px minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .my-class-content > img {
+    width: 72px;
+    height: 72px;
+  }
+
+  .my-class-progress {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .my-class-progress-track {
+    min-width: 45px;
+  }
+
+  .my-class-progress > a {
+    margin-left: auto;
+  }
+
+  .my-classes-demo-note {
+    text-align: left;
+  }
+}
